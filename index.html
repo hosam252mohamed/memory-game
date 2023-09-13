@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Memory Game</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="start-game">
+            <span>Start Game</span>
+        </div>
+        <div class="container">
+            <div class="info">
+                <span class="name">Hello: <span></span></span>
+                <span class="timer"><span></span>:<span></span></span>
+                <span class="tries">Wrong Tries: <span>0</span></span>
+            </div>
+            <div class="game-blocks">
+                <div class="block" data-block='angular'>
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/angular.png" alt="">
+                    </div>
+                </div>
+                <div class="block" data-block='angular'>
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/angular.png" alt="">
+                    </div>
+                </div>
+                <div class="block" data-block='css'>
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/css.png" alt="">
+                    </div>
+                </div>
+                <div class="block" data-block='css'>
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/css.png" alt="">
+                    </div>
+                </div>
+                <div class="block" data-block='js'>
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/js.png" alt="">
+                    </div>
+                </div>
+                <div class="block" data-block='js'>
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/js.png" alt="">
+                    </div>
+                </div>
+                <div class="block" data-block='cpp'>
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/cpp.png" alt="">
+                    </div>
+                </div>
+                <div class="block" data-block='cpp'>
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/cpp.png" alt="">
+                    </div>
+                </div>
+                <div class="block" data-block='mngdb'>
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/mangodb.png" alt="">
+                    </div>
+                </div>
+                <div class="block" data-block='mngdb'>
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/mangodb.png" alt="">
+                    </div>
+                </div>
+                <div class="block" data-block='python'>
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/python.png" alt="">
+                    </div>
+                </div>
+                <div class="block" data-block='python'>
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/python.png" alt="">
+                    </div>
+                </div>
+                <div class="block" data-block='go-lang'>
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/go-lang.png" alt="">
+                    </div>
+                </div>
+                <div class="block" data-block='go-lang'>
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/go-lang.png" alt="">
+                    </div>
+                </div>
+                <div class="block" data-block='vs'>
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/vs-code.png" alt="">
+                    </div>
+                </div>
+                <div class="block" data-block='vs'>
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/vs-code.png" alt="">
+                    </div>
+                </div>
+                <div class="block" data-block='java'>
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/java.png" alt="">
+                    </div>
+                </div>
+                <div class="block" data-block='java'>
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/java.png" alt="">
+                    </div>
+                </div>
+                <div class="block" data-block='swift'>
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/swift.png" alt="">
+                    </div>
+                </div>
+                <div class="block" data-block='swift'>
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/swift.png" alt="">
+                    </div>
+                </div>
+                <div class="block" data-block='ruby'>
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/ruby.png" alt="">
+                    </div>
+                </div>
+                <div class="block" data-block='ruby'>
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/ruby.png" alt="">
+                    </div>
+                </div>
+                <div class="block" data-block='scratch'>
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/scratch.png" alt="">
+                    </div>
+                </div>
+                <div class="block" data-block='scratch'>
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img src="imgs/scratch.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="finish-game">
+            <span>Finished</span>
+            <span>Play Again</span>
+        </div>
+        <script src="main.js"></script>
+    </body>
+
+</html>
