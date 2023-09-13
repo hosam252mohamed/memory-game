@@ -56,9 +56,7 @@ function flipClickedBlock() {
   );
   if (flippedBlocks.length === 2) {
     stopClick();
-    setTimeout(() => {
-      checkSameCards(flippedBlocks[0], flippedBlocks[1]);
-    }, duration);
+    checkSameCards(flippedBlocks[0], flippedBlocks[1]);
   }
 }
 
@@ -70,12 +68,14 @@ function stopClick() {
 }
 
 function checkSameCards(first, second) {
-  first.classList.remove("flipped");
-  second.classList.remove("flipped");
-
   if (first.getAttribute("data-block") === second.getAttribute("data-block")) {
     first.classList.add("matched");
     second.classList.add("matched");
+
+    first.classList.remove("flipped");
+    second.classList.remove("flipped");
+
+    document.querySelector(".audio .correct").play();
 
     let numberMatched = 0;
     allBlocks.forEach((el) => {
@@ -84,10 +84,18 @@ function checkSameCards(first, second) {
     if (numberMatched === allBlocks.length) {
       document.querySelector(".finish-game").style.display = "grid";
       clearInterval(ourTimer);
+      setTimeout(() => {
+        document.querySelector(".audio .win").play();
+      }, duration);
     }
   } else {
     let tries = document.querySelector(".info .tries span");
     tries.innerHTML = +tries.innerHTML + 1;
+    document.querySelector(".audio .wrong").play();
+    setTimeout(() => {
+      first.classList.remove("flipped");
+      second.classList.remove("flipped");
+    }, duration);
   }
 }
 
@@ -96,6 +104,8 @@ setInterval(() => {
     document.querySelector(".finish-game span:first-child").textContent =
       "Game Over";
     document.querySelector(".finish-game").style.display = "grid";
+
+    document.querySelector(".audio .lose").play();
   }
 }, duration);
 
