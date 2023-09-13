@@ -2,8 +2,8 @@ let duration = 1000;
 let timerMin = document.querySelector(".info .timer span:first-child");
 let timerSec = document.querySelector(".info .timer span:last-child");
 let ourTimer;
-timeInMin = "1";
-timeInSec = "05";
+timeInMin = "2";
+timeInSec = "00";
 timerMin.innerHTML = timeInMin;
 timerSec.innerHTML = timeInSec;
 
